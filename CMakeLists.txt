@@ -23,9 +23,9 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost ${BOOST_VER} REQUIRED COMPONENTS system date_time random) 
 
 
-add_compile_definitions(_WEBSOCKETPP_NOEXCEPT_)
-add_compile_definitions(_WEBSOCKETPP_CPP11_CHRONO_)
-add_compile_definitions(_WEBSOCKETPP_CPP11_FUNCTIONAL_)
+add_definitions(-D_WEBSOCKETPP_NOEXCEPT_)
+add_definitions(-D_WEBSOCKETPP_CPP11_CHRONO_)
+add_definitions(-D_WEBSOCKETPP_CPP11_FUNCTIONAL_)
 
 aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/src ALL_SRC)
 aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/src/internal ALL_SRC)
